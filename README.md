@@ -6,7 +6,7 @@ No databases or caches just files and that it.
 # Usage
 
 ```
-# Let's run short in the background
+# Let's run shorts in the background
 $ shorts -a :8080 -u /home/user/shorts &
 
 # Let's go to that directory
