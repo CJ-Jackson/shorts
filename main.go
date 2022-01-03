@@ -41,7 +41,7 @@ func main() {
 func serve(writer http.ResponseWriter, request *http.Request, urlLocation string) {
 	fileLocation := urlLocation + "/" + strings.Trim(request.URL.Path, "/") + ".txt"
 	file, err := os.Open(fileLocation)
-	if os.IsNotExist(err) {
+	if err != nil {
 		writer.WriteHeader(http.StatusNotFound)
 		fmt.Fprintln(writer, "Not Found")
 		return
